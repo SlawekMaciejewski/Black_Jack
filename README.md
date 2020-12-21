@@ -1,5 +1,7 @@
 # Black_Jack
 The simple game in the python console — Black Jack
+- The code was written at repl.it and it was committed from repl.it to my Github.
+- Check my account https://repl.it/@SlawekM/
 
 ############### Blackjack Rules #####################
 
