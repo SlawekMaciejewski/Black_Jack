@@ -44,15 +44,24 @@ def play_game():
         print(f"    Computer's first card: {computer_cards[0]}")
 
         #If the game has not ended, ask the user if they want to draw another card or the game.
-        if user_score == 0 or computer_score == 0 or user_score > 21:
-            print("The end")
+        if user_score == 0 or computer_score == 0 or user_score > 21:            
             is_game_over = True
+            print("THE END")
         else:
             user_should_deal = input("Type 'y' to get another card, type 'n' to pass: ")
             if user_should_deal == 'y':
                 user_cards.append(deal_card())
             else:
                 is_game_over = True
+        # Once the user is done, it's time to let the computer play. 
+        # The computer should keep drawing cards as long as it has a score less than 17.
+        while computer_score !=0 and computer_score < 17:
+            computer_cards.append(deal_card())
+            computer_score = calculate_score(computer_cards)
+    print(f"    Your final hand: {user_cards}, final score: {user_score}")
+    print(f"    Computer's final hand: {computer_cards}, final score: {computer_score}")
+    
+        
 
 # Clear the console and start the game
 while input("Do you want play a game of Black Jack? Type 'y' or 'n': ") == "y":
