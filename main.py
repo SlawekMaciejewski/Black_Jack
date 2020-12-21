@@ -1,4 +1,5 @@
 import random
+from art import logo
 from replit import clear
 
 
@@ -10,7 +11,7 @@ def deal_card():
     """Returns a random card from the deck."""
     cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
     card = random.choice(cards)
-    print(card)
+    # print(card)
     return card
 
 
@@ -26,8 +27,6 @@ def calculate_score(cards):
         cards.append(1)
     return sum(cards)
 
-
-# print(calculate_score(user_cards), calculate_score(computer_cards))
 
 # If the computer and user both have the same score, then it's a draw.+
 # If the computer has a blackjack (0), then the user loses.+
@@ -65,8 +64,8 @@ def play_game():
     for _ in range(2):
         user_cards.append(deal_card())
         computer_cards.append(deal_card())
-    print(user_cards, computer_cards)
-    print(calculate_score(user_cards), calculate_score(computer_cards))
+    # print(user_cards, computer_cards)
+    # print(calculate_score(user_cards), calculate_score(computer_cards))
     while not is_game_over:
         # Show user's cards and the computer's first card and show the user's score.
         user_score = calculate_score(user_cards)
@@ -77,7 +76,7 @@ def play_game():
         # If the game has not ended, ask the user if they want to draw another card or the game.
         if user_score == 0 or computer_score == 0 or user_score > 21:
             is_game_over = True
-            print("THE END")
+            # print("THE END")
         else:
             user_should_deal = input("Type 'y' to get another card, type 'n' to pass: ")
             if user_should_deal == 'y':
@@ -95,7 +94,8 @@ def play_game():
 
 
 # Clear the console and start the game
-while input("Do you want play a game of Black Jack? Type 'y' or 'n': ") == "y":
+while input("Do you want play a game of Black Jack? Type 'y' or 'n': ") == "y":    
     clear()
+    print(logo)
     play_game()
  
