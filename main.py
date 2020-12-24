@@ -18,6 +18,7 @@ def deal_card():
 # Function calculate_score() that takes a List of cards as input
 # and returns the score.
 def calculate_score(cards):
+    """Take a list of cards and return the score calculated from the cards"""
     # 0 will represent a blackjack in the game
     if sum(cards) == 21 and len(cards) == 2:
         return 0
