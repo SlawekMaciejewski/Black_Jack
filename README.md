@@ -15,4 +15,5 @@ The simple game in the python console — Black Jack
 - Cards are not removed from the deck as they are drawn.
 - The computer is the dealer.
 
+[![Run on Repl.it](https://repl.it/badge/github/SlawekMaciejewski/Black_Jack)](https://repl.it/github/SlawekMaciejewski/Black_Jack)
 
